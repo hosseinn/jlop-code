@@ -1,0 +1,39 @@
+
+// Doubler.idl
+// Andrew Davison, ad@fivedots.coe.psu.ac.th, Nov. 2016
+
+
+#ifndef _org_openoffice_doubler_XDoubler_
+#define _org_openoffice_doubler_XDoubler_
+
+
+#include <com/sun/star/uno/XInterface.idl>
+#include <com/sun/star/table/XCellRange.idl>
+#include <com/sun/star/sheet/XVolatileResult.idl>
+
+
+module org { module openoffice { module doubler {
+
+interface XDoubler {
+    double doubler([in] double value);
+
+    double doublerSum([in] sequence< sequence< double > > vals);
+
+    sequence< sequence< double > > sortByFirstCol([in] sequence< sequence< double > > vals);
+
+ /*   long usedCells([in] com::sun::star::table::XCellRange cr); */
+
+ /*   com::sun::star::sheet::XVolatileResult counter( [in] string aName, [in] double value); */
+
+  };
+
+}; }; };
+
+
+module org { module openoffice { module doubler 
+{
+  service Doubler : XDoubler;
+}; }; };
+
+
+#endif

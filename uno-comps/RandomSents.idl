@@ -1,0 +1,33 @@
+
+// RandomSents.idl
+// Andrew Davison, ad@fivedots.coe.psu.ac.th, September 2016
+
+
+#ifndef _org_openoffice_randomsents_RandomSents_
+#define _org_openoffice_randomsents_RandomSents_
+
+#include <com/sun/star/uno/XInterface.idl>
+
+
+
+module org { module openoffice { module randomsents 
+{
+  interface XRandomSents {
+    [attribute] boolean isAllCaps;
+
+    string getParagraph([in] long numSents);   // no int type
+
+    sequence<string> getSentences([in] long numSents);
+  };
+}; }; };
+
+
+
+
+module org { module openoffice { module randomsents 
+{
+  service RandomSents : XRandomSents;
+}; }; };
+
+
+#endif

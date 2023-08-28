@@ -1,0 +1,1 @@
+UNO Addon using Java to highlight all occurrences of a piece of text.

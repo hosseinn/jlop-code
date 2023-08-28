@@ -1,0 +1,11 @@
+<manifest:manifest>
+
+  <manifest:file-entry 
+       manifest:media-type="application/vnd.sun.star.uno-typelibrary;type=RDB" 
+	   manifest:full-path="RandomSents.rdb"/> 
+
+  <manifest:file-entry 
+      manifest:media-type="application/vnd.sun.star.uno-component;type=Java" 
+	  manifest:full-path="RandomSentsImpl.jar"/> 
+
+</manifest:manifest> 

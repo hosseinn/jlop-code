@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description xmlns="http://openoffice.org/extensions/description/2006" 
+xmlns:d="http://openoffice.org/extensions/description/2006" 
+xmlns:xlink="http://www.w3.org/1999/xlink"> 
+  
+  <identifier value="org.openoffice.randomsents"/>
+  <version value="0.1"/>
+  
+  <display-name>
+    <name lang="en">Random Sentences</name>
+  </display-name>
+  
+  <publisher>
+    <name xlink:href="http://fivedots.coe.psu.ac.th/~ad/jlop/" 
+          lang="en">Andrew Davison</name>
+  </publisher>
+
+  <registration>
+    <simple-license accept-by="user" >
+      <license-text xlink:href="license.txt" lang="en"/>
+    </simple-license>
+  </registration>
+
+  <extension-description>
+    <src lang="en" xlink:href="package-description.txt"/>
+  </extension-description>
+
+  <icon>
+    <default xlink:href="stack.png" />
+  </icon>
+
+  <update-information>
+    <src xlink:href="http://fivedots.coe.psu.ac.th/~ad/jlop/"/>
+  </update-information>
+
+  <dependencies> 
+  	<OpenOffice.org-minimal-version value="3.4" d:name="OpenOffice.org 3.4"/> 
+  </dependencies> 
+
+  <platform value="all" />
+
+</description> 

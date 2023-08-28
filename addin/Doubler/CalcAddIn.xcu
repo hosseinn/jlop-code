@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oor:component-data 
+   xmlns:oor="http://openoffice.org/2001/registry"  
+   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+   oor:name="CalcAddIns" 
+   oor:package="org.openoffice.Office">
+
+<node oor:name="AddInInfo">
+<node oor:name="org.openoffice.doubler.Doubler" oor:op="replace">
+<node oor:name="AddInFunctions">
+
+
+  <node oor:name="doubler" oor:op="replace">
+    <prop oor:name="DisplayName"><value xml:lang="en">doubler</value></prop>
+    <prop oor:name="Description"><value xml:lang="en">doubles a value</value></prop>
+    <prop oor:name="Category"><value>Add-In</value></prop>
+    <!-- <prop oor:name="CompatibilityName"><value/></prop>  -->
+    <prop oor:name="CompatibilityName"><value xml:lang="en">doubler</value></prop>
+    <node oor:name="Parameters">
+      <node oor:name="value" oor:op="replace">
+        <prop oor:name="DisplayName"><value xml:lang="en">value</value></prop>
+        <prop oor:name="Description"><value xml:lang="en">double</value></prop>
+      </node>
+    </node>
+  </node>
+
+
+  <node oor:name="doublerSum" oor:op="replace">
+    <prop oor:name="DisplayName"><value xml:lang="en">doublerSum</value></prop>
+    <prop oor:name="Description"><value xml:lang="en">doubles the sum of a cell range</value></prop>
+    <prop oor:name="Category"><value>Add-In</value></prop>
+    <prop oor:name="CompatibilityName"><value xml:lang="en">doublerSum</value></prop>
+    <node oor:name="Parameters">
+      <node oor:name="vals" oor:op="replace">
+        <prop oor:name="DisplayName"><value xml:lang="en">cellRange</value></prop>
+        <prop oor:name="Description"><value xml:lang="en">range of doubles</value></prop>
+      </node>
+    </node>
+  </node>
+
+
+  <node oor:name="sortByFirstCol" oor:op="replace">
+    <prop oor:name="DisplayName"><value xml:lang="en">sortByFirstCol</value></prop>
+    <prop oor:name="Description"><value xml:lang="en">sorts a cell range into ascending order using the first column values of the range</value></prop>
+    <prop oor:name="Category"><value>Add-In</value></prop>
+    <prop oor:name="CompatibilityName"><value xml:lang="en">sortByFirstCol</value></prop>
+    <node oor:name="Parameters">
+      <node oor:name="vals" oor:op="replace">
+        <prop oor:name="DisplayName"><value xml:lang="en">cell range</value></prop>
+        <prop oor:name="Description"><value xml:lang="en">range of doubles</value></prop>
+      </node>
+    </node>
+  </node>
+
+</node>
+</node>
+</node>
+</oor:component-data>

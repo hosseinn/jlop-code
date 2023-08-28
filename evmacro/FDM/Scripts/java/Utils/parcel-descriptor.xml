@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<parcel language="Java" xmlns:parcel="scripting.dtd">
+
+
+  <script language="Java">
+    <locale lang="en">
+      <displayname value="GetText.show"/>
+      <description>
+         Shows the text in a textfield
+      </description>
+    </locale>
+    <functionname value="GetText.show"/>
+    <logicalname value="GetText.show"/>
+    <languagedepprops>
+      <prop name="classpath" value="Macros.jar"/>
+    </languagedepprops>
+  </script>
+
+  <script language="Java">
+    <locale lang="en">
+      <displayname value="GetNumber.get"/>
+      <description>
+         Extract an integer from a textfield
+      </description>
+    </locale>
+    <functionname value="GetNumber.get"/>
+    <logicalname value="GetNumber.get"/>
+    <languagedepprops>
+      <prop name="classpath" value="Macros.jar"/>
+    </languagedepprops>
+  </script>
+
+
+</parcel>
+

@@ -1,0 +1,2 @@
+RegistrationClassName: EzHighlightAddonImpl
+Class-Path: Utils.jar

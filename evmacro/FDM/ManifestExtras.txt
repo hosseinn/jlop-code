@@ -1,0 +1,21 @@
+
+ <manifest:file-entry manifest:media-type="text/xml" 
+       manifest:full-path="Scripts/java/Utils/parcel-descriptor.xml"/>
+
+ <manifest:file-entry manifest:media-type="application/vnd.sun.star.dialog-library" 
+       manifest:full-path="dialogLibrary/" />
+ <manifest:file-entry manifest:media-type=""
+       manifest:full-path="dialogLibrary/NumExtractor.xdl" />
+
+ <manifest:file-entry manifest:media-type="application/binary" 
+       manifest:full-path="Scripts/java/Utils/"/>
+ <manifest:file-entry manifest:media-type="application/binary" 
+       manifest:full-path="Scripts/java/"/>
+ <manifest:file-entry manifest:media-type="application/binary" 
+       manifest:full-path="Scripts/"/>
+
+ <manifest:file-entry manifest:media-type="application/binary" 
+       manifest:full-path="Scripts/java/Utils/Macros.jar"/>
+
+
+ 

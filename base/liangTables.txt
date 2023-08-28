@@ -1,0 +1,128 @@
+
+// Student Table
+
+CREATE TABLE "Student" (
+  "ssn" CHAR(9),
+  "firstName" VARCHAR(25),
+  "mi" CHAR(1),
+  "lastName" VARCHAR(25),
+  "birthDate" DATE,
+  "street" VARCHAR(25),
+  "phone" CHAR(11),
+  "zipCode" CHAR(5),
+  "deptID" CHAR(4),
+  PRIMARY KEY ("ssn")
+)
+
+
+INSERT INTO "Student" ("ssn", "firstName", "mi", "lastName", "phone", "birthDate", "street", "zipCode", "deptID") VALUES ('444111110', 'Jacob', 'R', 'Smith', '9129219434', '1985-04-09', '99 Kingston Street', '31435', 'BIOL')
+
+INSERT INTO "Student" ("ssn", "firstName", "mi", "lastName", "phone", "birthDate", "street", "zipCode", "deptID") VALUES ('444111111', 'John', 'K', 'Stevenson', '9129219434', null, '100 Main Street', '31411', 'BIOL')
+
+INSERT INTO "Student" ("ssn", "firstName", "mi", "lastName", "phone", "birthDate", "street", "zipCode", "deptID") VALUES ('444111112', 'George', 'K', 'Smith', '9129213454', '1974-10-10', '1200 Abercorn St.', '31419', 'CS')
+
+INSERT INTO "Student" ("ssn", "firstName", "mi", "lastName", "phone", "birthDate", "street", "zipCode", "deptID") VALUES ('444111113', 'Frank', 'E', 'Jones', '9125919434', '1970-09-09', '100 Main Street', '31411', 'BIOL')
+
+INSERT INTO "Student" ("ssn", "firstName", "mi", "lastName", "phone", "birthDate", "street", "zipCode", "deptID") VALUES ('444111114', 'Jean', 'K', 'Smith', '9129219434', '1970-02-09', '100 Main Street', '31411', 'CHEM')
+
+INSERT INTO "Student" ("ssn", "firstName", "mi", "lastName", "phone", "birthDate", "street", "zipCode", "deptID") VALUES ('444111115', 'Josh', 'R', 'Woo', '7075989434', '1970-02-09', '555 Franklin St.', '31411', 'CHEM')
+
+INSERT INTO "Student" ("ssn", "firstName", "mi", "lastName", "phone", "birthDate", "street", "zipCode", "deptID") VALUES ('444111116', 'Josh', 'R', 'Smith', '9129219434', '1973-02-09', '100 Main Street', '31411', 'BIOL')
+
+INSERT INTO "Student" ("ssn", "firstName", "mi", "lastName", "phone", "birthDate", "street", "zipCode", "deptID") VALUES ('444111117', 'Joy', 'P', 'Kennedy', '9129229434', '1974-03-19', '103 Bay Street', '31412', 'CS')
+
+INSERT INTO "Student" ("ssn", "firstName", "mi", "lastName", "phone", "birthDate", "street", "zipCode", "deptID") VALUES ('444111118', 'Toni', 'R', 'Peterson', '9129229434', '1964-04-29', '103 Bay Street', '31412', 'MATH')
+
+INSERT INTO "Student" ("ssn", "firstName", "mi", "lastName", "phone", "birthDate", "street", "zipCode", "deptID") VALUES ('444111119', 'Patrick', 'R', 'Stoneman', '9129229434', '1969-04-29', '101 Washington St.', '31435', 'MATH')
+
+INSERT INTO "Student" ("ssn", "firstName", "mi", "lastName", "phone", "birthDate", "street", "zipCode", "deptID") VALUES ('444111120', 'Rick', 'R', 'Carter', '9125919434', '1986-04-09', '19 West Ford St.', '31411', 'BIOL')
+
+
+
+
+
+// -----------------------------------------------------
+// Course Table
+
+CREATE TABLE "Course" (
+  "courseId" CHAR(5),
+  "subjectId" CHAR(4) NOT NULL,
+  "courseNumber" INTEGER,
+  "title" VARCHAR(50) NOT NULL,
+  "numOfCredits" INTEGER,
+  PRIMARY KEY ("courseId")
+)
+
+INSERT INTO "Course" ("courseId", "subjectId", "courseNumber", "title", "numOfCredits") VALUES ('11111', 'CSCI', 1301, 'Introduction to Java I', 4)
+
+INSERT INTO "Course" ("courseId", "subjectId", "courseNumber", "title", "numOfCredits") VALUES ('11112', 'CSCI', 1302, 'Introduction to Java II', 3)
+
+INSERT INTO "Course" ("courseId", "subjectId", "courseNumber", "title", "numOfCredits") VALUES ('11113', 'CSCI', 3720, 'Database Systems', 3)
+
+INSERT INTO "Course" ("courseId", "subjectId", "courseNumber", "title", "numOfCredits") VALUES ('11114', 'CoE', 3721, 'Algorithms', 3)
+
+
+
+
+
+
+// -----------------------------------------------------
+// Enrollment Table
+
+CREATE TABLE "Enrollment" (
+  "ssn" CHAR(9),
+  "courseId" CHAR(5),
+  "dateRegistered" DATE,
+  "grade" CHAR(1),
+  PRIMARY KEY ("ssn", "courseId"),
+  FOREIGN KEY ("ssn") REFERENCES "Student" ("ssn"),
+  FOREIGN KEY ("courseId") REFERENCES "Course" ("courseId")
+)
+
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111110', '11111', '2004-03-19', 'A')
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111110', '11112', '2004-03-19', 'B')
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111110', '11113', '2004-03-19', 'C')
+
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111111', '11111', '2004-03-19', 'D')
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111111', '11112', '2004-03-19', 'F')
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111111', '11113', '2004-03-19', 'A')
+
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111112', '11111', '2004-03-19', 'B')
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111112', '11112', '2004-03-19', 'C')
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111112', '11113', '2004-03-19', 'D')
+
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111113', '11111', '2004-03-19', 'A')
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111113', '11113', '2004-03-19', 'A')
+
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111114', '11112', '2004-03-19', 'B')
+
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111115', '11111', '2004-03-19', 'F')
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111115', '11112', '2004-03-19', 'F')
+
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111116', '11111', '2004-03-19', 'D')
+
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111117', '11111', '2004-03-19', 'D')
+
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111118', '11111', '2004-03-19', 'A')
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111118', '11112', '2004-03-19', 'D')
+
+INSERT INTO "Enrollment" ("ssn", "courseId", "dateRegistered", "grade") VALUES ('444111118', '11113', '2004-03-19', 'B')
+

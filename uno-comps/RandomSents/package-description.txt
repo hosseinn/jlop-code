@@ -1,0 +1,2 @@
+UNO component using Java to generate random sentences and paragraphs.
+

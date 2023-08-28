@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parcel language="Java" xmlns:parcel="scripting.dtd">
+    <script language="Java">
+
+        <locale lang="en">
+            <displayname value="ShowEvent.show"/>
+            <description>
+                Shows a dialog with basic event information.
+            </description>
+        </locale>
+
+        <functionname value="ShowEvent.show"/>
+        <logicalname value="ShowEvent.show"/>
+        <languagedepprops>
+            <prop name="classpath" value="ShowEvent.jar"/>
+        </languagedepprops>
+    </script>
+</parcel>

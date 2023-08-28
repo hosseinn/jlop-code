@@ -1,0 +1,14 @@
+https://repo1.maven.org/maven2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar
+https://repo1.maven.org/maven2/net/java/dev/jna/jna-platform/5.13.0/jna-platform-5.13.0.jar
+https://repo1.maven.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar
+https://repo1.maven.org/maven2/javax/mail/mail/1.4.7/mail-1.4.7.jar
+https://repo1.maven.org/maven2/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar
+https://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar
+https://repo1.maven.org/maven2/com/sun/xml/bind/jaxb-ri/2.3.1/jaxb-ri-2.3.1.zip
+https://github.com/tdf/odftoolkit/releases/download/v0.9.0/odftoolkit-0.9.0-bin.zip
+https://repo1.maven.org/maven2/net/sf/sociaal/freetts/1.2.2/freetts-1.2.2.jar
+https://altushost-swe.dl.sourceforge.net/project/freetts/FreeTTS/FreeTTS%201.2.2/freetts-1.2.2-bin.zip
+https://web.archive.org/web/20180627172822if_/http://www.tcts.fpms.ac.be/synthesis/mbrola/bin/pcdos/mbr301d.zip
+https://web.archive.org/web/20171124134912if_/http://tcts.fpms.ac.be/synthesis/mbrola/dba/us1/us1-980512.zip
+https://web.archive.org/web/20171124134950if_/http://tcts.fpms.ac.be/synthesis/mbrola/dba/us2/us2-980812.zip
+https://web.archive.org/web/20171124135021if_/http://tcts.fpms.ac.be/synthesis/mbrola/dba/us3/us3-990208.zip

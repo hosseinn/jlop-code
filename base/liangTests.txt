@@ -1,0 +1,50 @@
+
+
+UPDATE "Course" 
+SET "numOfCredits" = 4
+WHERE "title" = 'Database Systems'
+
+SELECT "firstName", "mi", "lastName"
+FROM "Student"
+WHERE "deptID" = 'CS'
+
+SELECT "firstName", "mi", "lastName" 
+FROM "Student"
+WHERE "deptID" = 'CS' AND "zipCode" = '31412'
+
+SELECT * 
+FROM "Student"
+WHERE "deptID" = 'CS' AND "zipCode" = '31412'
+
+SELECT "title", 50*"numOfCredits" AS "Lecture Minutes Per Week"
+FROM "Course"
+WHERE "subjectId" = 'CSCI'
+
+SELECT DISTINCT "subjectId" AS "Subject ID"
+FROM "Course"
+
+SELECT DISTINCT "subjectId", "title"
+FROM "Course"
+
+SELECT "lastName", "firstName", "deptID"
+FROM "Student"
+WHERE "deptID" = 'CS'
+ORDER BY "lastName" DESC, "firstName" ASC
+
+SELECT DISTINCT "lastName", "firstName", "courseId"
+FROM "Student", "Enrollment"
+WHERE "Student".ssn = "Enrollment".ssn AND 
+lastName = 'Smith' AND "firstName" = 'Jacob'
+
+
+
+DELETE FROM "Course" 
+WHERE "title" = 'Database Systems'
+
+DELETE FROM "Course" 
+WHERE "title" = 'Algorithms'
+
+SELECT DISTINCT "subjectId" AS "Subject ID"
+FROM "Course"
+
+

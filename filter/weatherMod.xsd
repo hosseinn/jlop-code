@@ -1,0 +1,240 @@
+
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  jaxb:version="2.1"
+>
+  <xs:element name="coord">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:float" name="lat"/>
+          <xs:attribute type="xs:float" name="lon"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="country" type="xs:string"/>
+  <xs:element name="sun">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:dateTime" name="rise"/>
+          <xs:attribute type="xs:dateTime" name="set"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="speed">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="name"/>
+          <xs:attribute type="xs:float" name="value">
+             <!-- avoid "value" name conflict -->
+             <xs:annotation>
+                 <xs:appinfo>
+                     <jaxb:property name="valueAttribute"/>
+                 </xs:appinfo>
+             </xs:annotation>
+          </xs:attribute>
+
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="gusts" type="xs:string"/>
+  <xs:element name="direction">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="code"/>
+          <xs:attribute type="xs:string" name="name"/>
+          <xs:attribute type="xs:byte" name="value">
+             <!-- avoid "value" name conflict -->
+             <xs:annotation>
+                 <xs:appinfo>
+                     <jaxb:property name="valueAttribute"/>
+                 </xs:appinfo>
+             </xs:annotation>
+          </xs:attribute>
+
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="city">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="coord"/>
+        <xs:element ref="country"/>
+        <xs:element ref="sun"/>
+      </xs:sequence>
+      <xs:attribute type="xs:int" name="id"/>
+      <xs:attribute type="xs:string" name="name"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="temperature">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:byte" name="max"/>
+          <xs:attribute type="xs:byte" name="min"/>
+          <xs:attribute type="xs:string" name="unit"/>
+          <xs:attribute type="xs:byte" name="value">
+             <!-- avoid "value" name conflict -->
+             <xs:annotation>
+                 <xs:appinfo>
+                     <jaxb:property name="valueAttribute"/>
+                 </xs:appinfo>
+             </xs:annotation>
+          </xs:attribute>
+
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="humidity">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="unit"/>
+          <xs:attribute type="xs:byte" name="value">
+             <!-- avoid "value" name conflict -->
+             <xs:annotation>
+                 <xs:appinfo>
+                     <jaxb:property name="valueAttribute"/>
+                 </xs:appinfo>
+             </xs:annotation>
+          </xs:attribute>
+
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pressure">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="unit"/>
+          <xs:attribute type="xs:short" name="value">
+             <!-- avoid "value" name conflict -->
+             <xs:annotation>
+                 <xs:appinfo>
+                     <jaxb:property name="valueAttribute"/>
+                 </xs:appinfo>
+             </xs:annotation>
+          </xs:attribute>
+
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="wind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="speed"/>
+        <xs:element ref="gusts"/>
+        <xs:element ref="direction"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clouds">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="name"/>
+          <xs:attribute type="xs:byte" name="value">
+             <!-- avoid "value" name conflict -->
+             <xs:annotation>
+                 <xs:appinfo>
+                     <jaxb:property name="valueAttribute"/>
+                 </xs:appinfo>
+             </xs:annotation>
+          </xs:attribute>
+
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="visibility">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:short" name="value">
+             <!-- avoid "value" name conflict -->
+             <xs:annotation>
+                 <xs:appinfo>
+                     <jaxb:property name="valueAttribute"/>
+                 </xs:appinfo>
+             </xs:annotation>
+          </xs:attribute>
+
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="precipitation">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="mode"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="weather">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="icon"/>
+          <xs:attribute type="xs:short" name="number"/>
+          <xs:attribute type="xs:string" name="value">
+             <!-- avoid "value" name conflict -->
+             <xs:annotation>
+                 <xs:appinfo>
+                     <jaxb:property name="valueAttribute"/>
+                 </xs:appinfo>
+             </xs:annotation>
+          </xs:attribute>
+
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lastupdate">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:dateTime" name="value">
+             <!-- avoid "value" name conflict -->
+             <xs:annotation>
+                 <xs:appinfo>
+                     <jaxb:property name="valueAttribute"/>
+                 </xs:appinfo>
+             </xs:annotation>
+          </xs:attribute>
+
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="current">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="city"/>
+        <xs:element ref="temperature"/>
+        <xs:element ref="humidity"/>
+        <xs:element ref="pressure"/>
+        <xs:element ref="wind"/>
+        <xs:element ref="clouds"/>
+        <xs:element ref="visibility"/>
+        <xs:element ref="precipitation"/>
+        <xs:element ref="weather"/>
+        <xs:element ref="lastupdate"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
